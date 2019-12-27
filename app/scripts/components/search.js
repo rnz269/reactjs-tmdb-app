@@ -9,7 +9,11 @@ class SearchBox extends Component {
   render() {
     return (
       <div className="col-xs-12 search-container nopadding">
+      
+      {/* ROW 1: wraps entire search component*/}
         <div className="row">
+
+        {/* COL 1: displays logo */}
           <div className="col-xs-12 col-sm-6 col-lg-5">
             <a
               href="./"
@@ -19,6 +23,8 @@ class SearchBox extends Component {
               <img src={TMDBLogo} className="logo" alt="The Movie Database" />
             </a>
           </div>
+
+          {/* COL 2: displays search component */}
           <div className="col-xs-12 col-sm-6 col-lg-7">
             <form className="searchbox">
               {/* <label> */}
