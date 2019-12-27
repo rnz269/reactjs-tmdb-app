@@ -58,7 +58,7 @@ function App() {
               // Map the remote source JSON array to a JavaScript object array
               return $.map(movies.results, function(movie) {
                 return {
-                  value: movie.original_title, // search original title
+                  value: movie.original_title, // search original title (specifies what to search)
                   id: movie.id // get ID of movie simultaniously
                 };
               });
