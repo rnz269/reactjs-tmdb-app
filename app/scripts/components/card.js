@@ -1,15 +1,11 @@
-import React, { Component } from 'react';
+import React, {useEffect} from 'react';
 import ReactDOM from 'react-dom';
 let numeral = require('numeral');
 let backdropIMG;
 
-class Card extends Component {
+function Card({data}) {
 
-  render() {
-    let data = this.props.data
       // if movie ID found, then...
-
-
 
       let posterIMG = 'https://image.tmdb.org/t/p/w500' + data.poster,
           production = data.production,
@@ -42,6 +38,9 @@ class Card extends Component {
       }
 
 
+  useEffect(()=> {
+    document.body.style.backgroundImage = 'url(' + backdropIMG + ')';
+  }, [data.backdrop])
 
       return (
         <div className="col-xs-12 cardcont nopadding">
@@ -67,10 +66,8 @@ class Card extends Component {
           </div>
         </div>
       )
-    }
-  componentDidUpdate() {
-    document.body.style.backgroundImage = 'url(' + backdropIMG + ')';
-  }
+  
+
 }
 
 
