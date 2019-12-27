@@ -84,7 +84,7 @@ function App() {
 
       return (
       <div>
-        <SearchBox fetchMovieID={fetchMovieID}/>
+        <SearchBox />
         <Card data={movie}/>
       </div>
     )
